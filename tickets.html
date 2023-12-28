@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新一代設計展-Tickets</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.css">
+    <style>
+        body {
+            height: 1080px;
+            width: 1920px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-around px-5" style="background-color: #e4e0e0;">
+        <div class="navbar-brand"><img style="height: 100px;" src="./53LOGO.png" alt="LOGO"></div>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="home.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="news.html" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+                <a href="discover.html" class="nav-link">Discover</a>
+            </li>
+            <li class="nav-item active">
+                <a href="tickets.html" class="nav-link">Tickets</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h2 class="text-center pt-5">訂票中心</h2>
+        <form action="tickets.php" method="post" id="form">
+            <table class="w-25 mx-auto">
+                <tr class="form-group">
+                    <td class="form-text">名字(First name):</td>
+                    <td><input class="form-control" type="text" name="first_name" id="first_name"></td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-text">姓氏(last name):</td>
+                    <td><input class="form-control" type="text" name="last_name" id="last_name"></td>
+                </tr>
+                <tr class="form-group ">
+                    <td class="form-text">手機號碼(Phone):</td>
+                    <td><input class="form-control" type="text" name="phone" id="phone"></td>
+                </tr>
+                <tr class="form-group ">
+                    <td class="form-text">會員密碼(Password):</td>
+                    <td><input class="form-control" type="password" name="password" id="password"></td>
+                </tr>
+                <tr class="form-group ">
+                    <td class="form-text">數字驗證(Verification):</td>
+                    <td>
+                        <div class="d-flex">
+                            <input class="form-control col-9" type="text" name="veri" id="veri">
+                            <span class="veri col-3"></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center"><input class="btn btn-primary" type="submit" value="送出(submit)">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </main>
+    <div class="fixed-bottom py-3 w-100 text-center">
+        <div class=" text-center w-100">
+            <img src="./img/Facebook.png" alt="Facebook">
+            <img src="./img/Google.png" alt="Google">
+        </div>
+        <footer>Copyright © 2023 YODEX All Rights Reserved</footer>
+    </div>
+    <script src="./JS/jquery.js"></script>
+    <script src="./JS/bootstrap.js"></script>
+    <script>
+        $(".veri").load("veri.php")
+    </script>
+</body>
+
+</html>
